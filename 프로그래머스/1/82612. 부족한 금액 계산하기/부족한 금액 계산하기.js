@@ -4,7 +4,5 @@ function solution(price, money, count) {
     for (let i = 1; i <= count; i++) {
         totalPrice += (price * i);
     }
-    const result = money - totalPrice;
-    
-    return result > 0 ? 0 : Math.abs(result);
+    return totalPrice > money ? totalPrice - money : 0;
 }
